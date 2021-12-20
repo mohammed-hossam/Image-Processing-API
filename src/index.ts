@@ -1,4 +1,6 @@
 import express, { Application, Request, Response } from 'express';
+import fs from 'fs';
+import { resizedImgsFolderPath } from './utiles/imgsMainpath';
 import imagesRoute from './routes/imagesRoutes';
 
 const port = 3000;
@@ -6,7 +8,9 @@ const port = 3000;
 const app: Application = express();
 
 app.listen(port, () => {
-    // console.log('welcome');
+    if (!fs.existsSync(resizedImgsFolderPath)) {
+        fs.mkdirSync(resizedImgsFolderPath);
+    }
 });
 
 app.use('/api', imagesRoute);
