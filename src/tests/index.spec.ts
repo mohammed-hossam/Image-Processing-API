@@ -1,7 +1,6 @@
 import supertest, { SuperTest, Test, Response } from 'supertest';
 import app from '../index';
 
-// create a request object
 const request: SuperTest<Test> = supertest(app);
 
 describe('Test responses', () => {

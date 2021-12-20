@@ -14,7 +14,6 @@ const resizeController = async (req: Request, res: Response): Promise<void> => {
 
     if (fs.existsSync(output)) {
         res.sendFile(output);
-        console.log('from cache');
     } else {
         const resizeProps = {
             input,
@@ -29,7 +28,6 @@ const resizeController = async (req: Request, res: Response): Promise<void> => {
             res.send(err);
         } else {
             res.sendFile(output);
-            console.log('from scratch');
         }
     }
 };

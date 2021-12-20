@@ -16,5 +16,3 @@ app.use((req: Request, res: Response) => {
 });
 
 export default app;
-
-// http://localhost:3000/api/images?filename=fjord&width=200&height=500
