@@ -6,7 +6,7 @@ const port = 3000;
 const app: Application = express();
 
 app.listen(port, () => {
-    console.log('welcome');
+    // console.log('welcome');
 });
 
 app.use('/api', imagesRoute);

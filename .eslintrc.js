@@ -18,7 +18,7 @@ module.exports = {
     settings: {
         'import/resolver': {
             node: {
-                extensions: ['.js', '.jsx', '.ts', '.tsx'],
+                extensions: ['.js', '.ts'],
             },
         },
     },
@@ -31,9 +31,7 @@ module.exports = {
                 endOfLine: 'auto',
             },
         ],
-        // indent: ['error', 'space'],
-        // semi: ['error', 'never'],
-        // 'no-use-before-define': ['error', { functions: true, classes: true }],
+
         'no-var': 'error',
         'import/extensions': [
             'error',
@@ -51,5 +49,3 @@ module.exports = {
         'class-methods-use-this': 'off',
     },
 };
-
-// 'plugin:@typescript-eslint/recommended',
